@@ -1,4 +1,4 @@
-# SNAKES GAME
+# ULO
 # Use ARROW KEYS to play, SPACE BAR for pausing/resuming and Esc Key for exiting
 
 import curses
@@ -20,12 +20,12 @@ score = 0
 snake = [[4,10], [4,9], [4,8]]                                     # Initial snake co-ordinates
 food = [10,20]                                                     # First food co-ordinates
 
-win.addch(food[0], food[1], '*')                                   # Prints the food
+win.addch(food[0], food[1], '>:D')                                   # Prints the food
 
 while key != 27:                                                   # While Esc key is not pressed
     win.border(0)
     win.addstr(0, 2, 'Score : ' + str(score) + ' ')                # Printing 'Score' and
-    win.addstr(0, 27, ' SNAKE ')                                   # 'SNAKE' strings
+    win.addstr(0, 37, ' SNAKE by:mr.mbest ')                                   # 'SNAKE' strings
     win.timeout(150 - (len(snake)/5 + len(snake)/10)%120)          # Increases the speed of Snake as its length increases
     
     prevKey = key                                                  # Previous key pressed
@@ -66,12 +66,12 @@ while key != 27:                                                   # While Esc k
         while food == []:
             food = [randint(1, 18), randint(1, 58)]                 # Calculating next food's coordinates
             if food in snake: food = []
-        win.addch(food[0], food[1], '*')
+        win.addch(food[0], food[1], 'o')
     else:    
         last = snake.pop()                                          # [1] If it does not eat the food, length decreases
         win.addch(last[0], last[1], ' ')
-    win.addch(snake[0][0], snake[0][1], '#')
+    win.addch(snake[0][0], snake[0][1], 'o')
     
 curses.endwin()
-print("\nScore - " + str(score))
-print("http://bitemelater.in\n")
+print("\nNOOB Kalahan janck!! " + str(score))
+print("coba lagi")
