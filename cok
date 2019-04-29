@@ -74,5 +74,5 @@ while key != 37:                                                   # While Esc k
     win.addch(snake[0][0], snake[0][1], 'o')
     
 curses.endwin()
-print("\nNOOB Kalahan janck " + str(score))
-print("coba lagi")
+print("\nNOOB janck " + str(score))
+print("GAME OVER")
